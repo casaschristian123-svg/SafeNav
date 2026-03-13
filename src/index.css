@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SafeNav Command Center Design System */
+
+@layer base {
+  :root {
+    /* User Theme - Deep Navy & White - Trustworthy */
+    --background: 210 20% 98%;
+    --foreground: 210 29% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 29% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 29% 10%;
+
+    /* Primary - Deep Navy Blue #0D1B2A */
+    --primary: 210 55% 11%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Light gray */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 210 29% 10%;
+
+    /* Muted */
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 20% 45%;
+
+    /* Accent - Ocean Blue #0284C7 */
+    --accent: 200 98% 39%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive/Danger - Urgent Red #DC2626 */
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Success - Green */
+    --success: 142 70% 40%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning - Amber */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Command Center Navy #0D1B2A */
+    --command: 210 55% 11%;
+    --command-foreground: 0 0% 100%;
+    --command-muted: 210 40% 18%;
+
+    /* Ocean Blue for actions #0284C7 */
+    --ocean: 200 98% 39%;
+    --ocean-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 210 55% 11%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar - Command Center Navy */
+    --sidebar-background: 210 55% 11%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 200 98% 39%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 18%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 40% 18%;
+    --sidebar-ring: 200 98% 39%;
+  }
+
+  .dark {
+    --background: 210 29% 6%;
+    --foreground: 210 20% 98%;
+
+    --card: 210 29% 10%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 210 29% 10%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 200 98% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 29% 15%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 210 29% 15%;
+    --muted-foreground: 210 20% 65%;
+
+    --accent: 200 98% 39%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 29% 18%;
+    --input: 210 29% 18%;
+    --ring: 200 98% 39%;
+
+    --sidebar-background: 210 29% 6%;
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-primary: 200 98% 39%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 29% 12%;
+    --sidebar-accent-foreground: 210 20% 98%;
+    --sidebar-border: 210 29% 12%;
+    --sidebar-ring: 200 98% 39%;
+  }
+
+  /* Command Center theme for admin */
+  .command-theme {
+    --background: 210 55% 11%;
+    --foreground: 0 0% 100%;
+    --card: 210 40% 15%;
+    --card-foreground: 0 0% 100%;
+    --muted: 210 40% 18%;
+    --muted-foreground: 210 20% 70%;
+    --border: 210 40% 20%;
+    --input: 210 40% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-lg border border-border/50 shadow-lg;
+  }
+
+  .nav-safe {
+    @apply fixed bottom-0 left-0 right-0 bg-card border-t border-border md:relative md:border-t-0;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .command-gradient {
+    background: linear-gradient(135deg, hsl(210 55% 11%) 0%, hsl(210 40% 18%) 100%);
+  }
+}
